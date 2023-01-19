@@ -26,16 +26,39 @@
 1. [World Energy Consumption](https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption)
 2. [Emissions by Country](https://www.kaggle.com/datasets/thedevastator/global-fossil-co2-emissions-by-country-2002-2022)
 3. [Latitude and Longitude for Every Country and State](https://www.kaggle.com/datasets/paultimothymooney/latitude-and-longitude-for-every-country-and-state)
+4. [Land area (sq. km)](https://data.worldbank.org/indicator/AG.LND.TOTL.K2?view=chart)
 
 </br>
 
 ## Description
 
-This repo includes an ETL pipeline leveraging the different datasets highlighted above. The team began by identifying the different agr
+This repo includes an ETL pipeline leveraging the different datasets highlighted above. The team began by narrowing down our datasets and then outlining our data model to then construct as a team. Below is the diagram of our data model:
 
- working with a team. Alejandro performed profiling, cleaning and transformations on the [Global Cost of Living](https://www.kaggle.com/datasets/mvieira101/global-cost-of-living), and exported to a clean version of the csv named `cost_living.csv`. Drew worked on profiling, cleaning and transformations for the [World Happiness Report 2021](https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2021) and [World Happiness Ranking](https://www.kaggle.com/datasets/anamvillalpando/world-happiness-ranking) data sets to merge into `world_happiness_clean.csv`. Ruben performed profiling, cleaning and transformations on the [USA Real Estate Data](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset) to compile `clean_realtor_data.csv`, and then joined the other contributors' datasets into one consolidated csv file. The realtor and cost of living data were concatenated in order to expand the data set for price per square meter data at the city level. Then that expanded data (`cost_living_with_realtor.csv`) set was merged with `world_happiness_clean.csv` into the consolidated `cl_real_happiness.csv`.
+<img src="imgs/data-model.drawio.png" alt="data model" width="640"/>
 
-Once the datasets were cleaned and consolidated, the team created (and in some cases recreated) data visualizations and analysis using `cl_real_happiness.csv`. In the `rg_maps.ipynb` notebook is a geo heat map of life expectancy by country that was put together by Ruben. Below is the output of the visualization:
+### WHY Snowflake vs Star Schema:
+The team debated the merits of leveraging a star schema or snowflake schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on 1) size of the data sets not having a meaningful impact on performance resulting from joins and 2) organization being user friendly and intuitive.
+
+### Architectural diagram
+<img src="" alt="Architectural diagram" width="640"/>
+
+### Data Pipeline
+<img src="" alt="Data Pipeline" width="640"/>
+
+### ETL Construction:
+[Reed](https://github.com/Reed-Carter) constructed the `dim_country` table in the `REED.ipynb` notebook. REED performed profiling, cleaning and transformations on the [Latitude and Longitude for Every Country and State](https://www.kaggle.com/datasets/paultimothymooney/latitude-and-longitude-for-every-country-and-state) and [Land area (sq. km)](https://data.worldbank.org/indicator/AG.LND.TOTL.K2?view=chart) datasets. Upon completion it was loaded to BigQuery.
+
+[Chloe](https://github.com/ChloeL6) worked on profiling, cleaning and transformations for the [Emissions by Country](https://www.kaggle.com/datasets/thedevastator/global-fossil-co2-emissions-by-country-2002-2022) data set create the `fct_emissions` table. Upon completion it was loaded to BigQuery.
+
+Ruben performed profiling, cleaning and transformations on the [World Energy Consumption](https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption) to compile both the `fct_gdp` and `fct_consump` tables. Upon completion it was loaded to BigQuery. Ruben was also the lead for authoring the `README.md`
+
+
+### Visualizations:
+Once the datasets were cleaned and consolidated, the team created data visualizations and analysis (using Looker Studio) leveraging the constructed dimension and fact tables outlined above. 
+
+Below is a bar and line combo graph that shows GDP compared to Population and Energy Consumption, that was put together by Ruben:
+
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/dbe92c8b-ccd3-41d9-b269-5964eb9717c3/page/f94CD" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <br>
 
@@ -141,6 +164,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 </br>
 
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/dbe92c8b-ccd3-41d9-b269-5964eb9717c3/page/f94CD" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/8a085df7-5101-4878-8c2c-8c6230de60d2/page/p_rh0ezxzj2c" frameborder="0" style="border:0" allowfullscreen></iframe>
 <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/fd52bc6a-18e7-4421-a385-c74ed91b9794/page/hpzCD" frameborder="0" style="border:0" allowfullscreen></iframe>
