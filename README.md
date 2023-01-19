@@ -36,7 +36,7 @@
 This repo includes an ETL pipeline leveraging the different datasets highlighted above. The team began by narrowing down our datasets and then outlining 1) Architectural structure 2) data model and 3) the full ETL pipeline to then construct each respective portion as a team:
 
 #### Architectural diagram:
-<img src="imgs/ETL_pipeline.png" alt="Architectural diagram" width="640"/>
+<img src="imgs/architecture_diagram.drawio.png" alt="Architectural diagram" width="640"/>
 
 <br>
 
@@ -45,8 +45,8 @@ This repo includes an ETL pipeline leveraging the different datasets highlighted
 
 <br>
 
-##### WHY Snowflake vs Star Schema:
-The team debated the merits of leveraging a star schema or snowflake schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on 1) size of the data sets not having a meaningful impact on performance resulting from joins and 2) organization being user friendly and intuitive.
+##### Why Snowflake vs Star Schema:
+The team debated the merits of leveraging a snowflake schema vs star schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on the size of the data sets not having a meaningful impact on performance (resulting from need for additional joins) and opting for the organization of data being more user friendly and intuitive.
 
 <br>
 
