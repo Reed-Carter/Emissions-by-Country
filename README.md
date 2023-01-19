@@ -33,24 +33,25 @@
 
 ## Description
 
-This repo includes an ETL pipeline leveraging the different datasets highlighted above. The team began by narrowing down our datasets and then outlining our data model to then construct as a team. Below is the diagram of our data model:
+This repo includes an ETL pipeline leveraging the different datasets highlighted above. The team began by narrowing down our datasets and then outlining 1) Architectural structure 2) data model and 3) the full ETL pipeline to then construct each respective portion as a team:
 
-<img src="imgs/data-model.drawio.png" alt="data model" width="640"/>
-
-<br>
-
-### WHY Snowflake vs Star Schema:
-The team debated the merits of leveraging a star schema or snowflake schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on 1) size of the data sets not having a meaningful impact on performance resulting from joins and 2) organization being user friendly and intuitive.
-
-<br>
-
-### Architectural diagram
+#### Architectural diagram:
 <img src="imgs/ETL_pipeline.png" alt="Architectural diagram" width="640"/>
 
 <br>
 
-### Data Pipeline
-<img src="" alt="Data Pipeline" width="640"/>
+#### Data Model:
+<img src="imgs/data-model.drawio.png" alt="data model" width="640"/>
+
+<br>
+
+##### WHY Snowflake vs Star Schema:
+The team debated the merits of leveraging a star schema or snowflake schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on 1) size of the data sets not having a meaningful impact on performance resulting from joins and 2) organization being user friendly and intuitive.
+
+<br>
+
+#### Data Pipeline:
+<img src="imgs/ETL_pipeline.png" alt="Architectural diagram" width="640"/>
 
 <br>
 
@@ -63,7 +64,7 @@ The team debated the merits of leveraging a star schema or snowflake schema, whi
 
 <br>
 
-[Ruben](https://github.com/rgiosa10) performed profiling, cleaning and transformations on the [World Energy Consumption](https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption) to compile both the `fct_gdp` and `fct_consump` tables. Upon completion it was loaded to BigQuery. Ruben was also the lead for authoring the `README.md`
+[Ruben](https://github.com/rgiosa10) performed profiling, cleaning and transformations on the [World Energy Consumption](https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption) to compile both the `fct_gdp` and `fct_consump` tables. Upon completion it was loaded to BigQuery. He also owned and authored the `README.md`.
 
 <br>
 
@@ -86,7 +87,7 @@ Chloe put together a line graph plotting the global CO2 emissions over time with
 
 Reed put together a line graph plotting the global CO2 emissions over time with total emissions and each type of emission producer:
 
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/fd52bc6a-18e7-4421-a385-c74ed91b9794/page/hpzCD" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/cb660041-9099-412a-a8ad-647d4e4c2115/page/MM" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <br>
 
