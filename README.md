@@ -45,7 +45,7 @@ The team debated the merits of leveraging a star schema or snowflake schema, whi
 <br>
 
 ### Architectural diagram
-<img src="" alt="Architectural diagram" width="640"/>
+<img src="imgs/ETL_pipeline.png" alt="Architectural diagram" width="640"/>
 
 <br>
 
