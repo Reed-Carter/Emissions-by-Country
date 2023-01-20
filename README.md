@@ -99,9 +99,15 @@ The chart leverages different scales for the left and right y-axis to better sho
 
 <br>
 
-Chloe put together two line graphs that 1) plots the global CO2 emissions over time with total emissions and each type of emission producer and 2) total consumption compared to renewable consumption:
+Chloe put together two line graphs that 1) plots the global CO2 emissions over time with total emissions and each type of emission producer and 2) total consumption compared to renewable consumption (click on the image of either chart to use dashboard):. 
 
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/8a085df7-5101-4878-8c2c-8c6230de60d2/page/p_rh0ezxzj2c" frameborder="0" style="border:0" allowfullscreen></iframe>
+Global CO2 Emissions: 
+[<img src="imgs/cl_global_CO2_emissions.png">](https://datastudio.google.com/embed/reporting/8a085df7-5101-4878-8c2c-8c6230de60d2/page/p_rh0ezxzj2c)
+
+Total Energy Consumption vs Renewable Energy Consumption:
+[<img src="imgs/cl_total_consump_vs_renewable.png">](https://datastudio.google.com/embed/reporting/8a085df7-5101-4878-8c2c-8c6230de60d2/page/p_rh0ezxzj2c)
+
+
 
 <br>
 
