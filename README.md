@@ -2,7 +2,7 @@
 
 #### By [Ruben Giosa](https://github.com/rgiosa10), [Reed Carter](https://github.com/Reed-Carter), [Chloe (Yen Chi) Le](https://github.com/ChloeL6)
 
-#### This repo includes exercises for working with datasets using Python, pandas working as a team. 
+#### This repo showcases working with datasets using Python, pandas, SQL, BigQuery and Looker Studio working as a team to develop an ETL pipeline. 
 
 <br>
 
