@@ -89,13 +89,13 @@ Below is a line chart by Ruben that shows total global energy consumption compar
 
 [<img src="imgs/Con_Em_Looker_graph.png">](https://datastudio.google.com/embed/reporting/dbe92c8b-ccd3-41d9-b269-5964eb9717c3/page/f94CD)
 
-As called out above Github disables iframe, but I have included the code below for those that want to use if they download the repo.
+As called out above Github disables iframe, but I have included the code below for reference:
 
 ```
 <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/b7d972c6-7faf-4c78-948c-614945f42350/page/Io6CD" frameborder="0" style="border:0" allowfullscreen></iframe>
 ```
 
-The chart leverages different scales for the left and right y-axis to better show the linear correlation between emissions and energy consumption over time (1965 - 2019). The chart is dynamic in that it allows users to filter for country and timeframe.
+The chart leverages different scales for the left and right y-axis to better show the correlation between emissions and energy consumption over time (1965 - 2019). The chart is dynamic in that it allows users to filter for country and timeframe.
 
 <br>
 
@@ -161,7 +161,7 @@ Overall, the team was able to limit the amount of merge conflicts by working on 
 
 MIT License
 
-Copyright (c) 2022 Ruben Giosa, Alejandro Socarras, Drew White
+Copyright (c) 2022 Ruben Giosa, Reed Carter, Chloe (Yen Chi) Le
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
