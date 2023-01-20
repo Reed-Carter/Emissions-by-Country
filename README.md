@@ -2,7 +2,7 @@
 
 #### By [Ruben Giosa](https://github.com/rgiosa10), [Reed Carter](https://github.com/Reed-Carter), [Chloe (Yen Chi) Le](https://github.com/ChloeL6)
 
-#### This repo includes exercises for working with datasets using Python, pandas working as a team. 
+#### This repo showcases working with datasets using Python, pandas, SQL, BigQuery and Looker Studio working as a team to develop an ETL pipeline. 
 
 <br>
 
@@ -36,7 +36,7 @@
 This repo includes an ETL pipeline leveraging the different datasets highlighted above. The team began by narrowing down our datasets and then outlining 1) Architectural structure 2) data model and 3) the full ETL pipeline to then construct each respective portion as a team:
 
 #### Architectural diagram:
-<img src="imgs/ETL_pipeline.png" alt="Architectural diagram" width="640"/>
+<img src="imgs/architecture_diagram.drawio.png" alt="Architectural diagram" width="640"/>
 
 <br>
 
@@ -45,8 +45,8 @@ This repo includes an ETL pipeline leveraging the different datasets highlighted
 
 <br>
 
-##### WHY Snowflake vs Star Schema:
-The team debated the merits of leveraging a star schema or snowflake schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on 1) size of the data sets not having a meaningful impact on performance resulting from joins and 2) organization being user friendly and intuitive.
+##### Why Snowflake vs Star Schema:
+The team debated the merits of leveraging a snowflake schema vs star schema, while we acknowledged the efficiencies of a star schema that would be achieved by consolidating fact tables, we landed on a snowflake schema based on the size of the data sets not having a meaningful impact on performance (resulting from need for additional joins) and opting for the organization of data being more user friendly and intuitive.
 
 <br>
 
@@ -71,11 +71,19 @@ The team debated the merits of leveraging a star schema or snowflake schema, whi
 ### Visualizations:
 Once the datasets were cleaned and consolidated, the team created data visualizations and analysis (using Looker Studio) leveraging the constructed dimension and fact tables outlined above. 
 
-Below is a bar and line combo graph that shows GDP compared to Population and Energy Consumption, that was put together by Ruben:
+Below is a combo chart that was put together by Ruben that shows GDP compared to Population and Energy Consumption:
 
 <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/dbe92c8b-ccd3-41d9-b269-5964eb9717c3/page/f94CD" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-The scale of GDP (trillions of dollars), population (billions), and Energy consumption (thousands of kwatts) posed an issue for the visualization, but by embedding this report the user is able to see the individual values for energy consumption which shows the consistent trend that population and energy consumption growth align with the growth of GDP. Also the timeframe of 1965 through 2016 was chosen as consumption data prior to 1965 was missing and GDP data goes up to 2016.
+The scale of GDP (trillions of dollars), population (billions), and Energy consumption (thousands of terawatt-hours) posed an issue for the visualization, but by embedding this report the user is able to see the individual values for energy consumption which shows the consistent trend that population and energy consumption growth align with the growth of GDP. Also the timeframe of 1965 through 2016 was chosen as consumption data prior to 1965 was missing and GDP data goes up to 2016.
+
+<br>
+
+Below is a line chart by Ruben that shows total global energy consumption (terrawatt hours) compared to CO2 emissions (kt):
+
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/b7d972c6-7faf-4c78-948c-614945f42350/page/Io6CD" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+The chart leverages different scales for the left and right y-axis to better show the linear correlation between emissions and energy consumption over time (1965 - 2019).
 
 <br>
 
