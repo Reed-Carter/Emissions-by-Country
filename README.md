@@ -107,9 +107,9 @@ Chloe put together two line graphs that 1) plots the global CO2 emissions over t
 
 <br>
 
-Reed put together a line graph plotting the global CO2 emissions over time with total emissions and each type of emission producer:
+Reed put together a line graph plotting the world GDP compared to coastline size and population:
 
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/cb660041-9099-412a-a8ad-647d4e4c2115/page/MM" frameborder="0" style="border:0" allowfullscreen></iframe>
+[<img src="imgs/GDP_pop_coast_Looker_graph.png">](https://datastudio.google.com/embed/reporting/cb660041-9099-412a-a8ad-647d4e4c2115/page/MM)
 
 <br>
 
